@@ -1,0 +1,751 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Undeviating 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140322
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link
+		href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial"
+		rel="stylesheet" />
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+	<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+
+				<h1><a href="#">影音社群平台聲量預測</a></h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" accesskey="1" title="">Home Page</a></li>
+					<li><a href="Method.html" accesskey="2" title="">Method</a></li>
+					<li class="active"><a href="" accesskey="3" title="">Try It !</a></li>
+					<li><a href="ana.html" accesskey="4" title="">Analysis</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div id="welcome" class="container">
+
+
+			<div style=" margin-top: 40px;">
+				<div align="left">
+					<h3 style="font-family: Microsoft JhengHei; ">影片長度： </h3>
+
+					<div class="container" style=" margin-top: 20px;">
+						<div class="row">
+							<div class="col" style="font-family: Microsoft JhengHei;">小時</div>
+							<div class="col" style="font-family: Microsoft JhengHei;">分鐘</div>
+							<div class="col" style="font-family: Microsoft JhengHei;">秒數</div>
+							<div class="w-100"></div>
+							<div class="col"><input type="number" class="form-control" id="hour" max=24 min=0 value=0>
+							</div>
+							<div class="col"><input type="number" class="form-control" id="minute" max=60 min=0 value=0>
+							</div>
+							<div class="col"><input type="number" class="form-control" id="second" max=60 min=0 value=0>
+							</div>
+						</div>
+					</div>
+
+					<br />
+					<div class="container" style=" margin-top: 20px;">
+						<div class="row">
+							<div class="col" style="font-family: Microsoft JhengHei;">
+								<h3 style="font-family: Microsoft JhengHei;">頻道資訊： </h3>
+							</div>
+
+							<div class="col-4" style="font-family: Microsoft JhengHei;"><input type="text"
+									class="form-control" id="channelId" placeholder="快速輸入頻道資訊"></div>
+							<div class="col" style="font-family: Microsoft JhengHei;"><button type="button"
+									class="btn btn-outline-dark btn" id="cid">Try！</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="container" style=" margin-top: 20px;">
+					<div class="row">
+						<div class="w-100"></div>
+						<div class="col" style="font-family: Microsoft JhengHei;">頻道總觀看人數</div>
+						<div class="col" style="font-family: Microsoft JhengHei;">訂閱總數</div>
+						<div class="col" style="font-family: Microsoft JhengHei;">上傳影片數</div>
+						<div class="w-100"></div>
+						<div class="col"><input type="number" class="form-control" id="totalcount" min=0 value=0>
+						</div>
+						<div class="col"><input type="number" class="form-control" id="sub" min=0 value=0>
+						</div>
+						<div class="col"><input type="number" class="form-control" id="videocount" min=1 value=1>
+						</div>
+
+					</div>
+				</div>
+				<br />
+				<h3 style="font-family: Microsoft JhengHei;">頻道建立時間： </h3>
+				<div class="container" style=" margin-top: 20px;">
+					<div class="row">
+						<div class="col" style="font-family: Microsoft JhengHei;">西元年</div>
+						<div class="col" style="font-family: Microsoft JhengHei;">月</div>
+						<div class="col" style="font-family: Microsoft JhengHei;">日</div>
+						<div class="w-100"></div>
+						<div class="col"><input type="number" class="form-control" id="channel_year" max=2019 min=2005
+								value=2005>
+						</div>
+						<div class="col"><input type="number" class="form-control" id="channel_month" max=12 min=1
+								value=1>
+						</div>
+						<div class="col"><input type="number" class="form-control" id="channel_date" max=31 min=1
+								value=1>
+						</div>
+					</div>
+
+
+
+				</div>
+				<br />
+
+				<form>
+					<h3 style="font-family: Microsoft JhengHei;">影片類別：</h3>
+
+
+					<div class="row" style=" margin-top: 20px;">
+
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=1> 娛樂
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=2> 電影動畫
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=3> 人物網誌
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=4>新聞與政治
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=5> 體育
+							</div>
+						</div>
+						<div class="w-100"></div>
+
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=6> 科學
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=7>喜劇
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=8>旅行與活動
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=9>音樂
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=10>汽車與交通
+							</div>
+						</div>
+						<div class="w-100"></div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=11>教育
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=12>遊戲
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=13>寵物與動物
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=14> DIY教學
+							</div>
+						</div>
+						<div class="col">
+							<div class="alert alert-info" role="alert">
+
+								<input type="radio" id="rad" name="radio" value=15>社會運動
+							</div>
+						</div>
+
+
+
+					</div>
+
+				</form>
+
+
+				<br />
+				<center>
+					<button type="button" class="btn btn-outline-info btn-lg" id="btn3">馬上預測</button>
+				</center>
+				<br />
+
+
+				<br />
+
+			</div>
+
+		</div>
+	</div>
+
+	</div>
+	<center>
+		<h2><span style="font-family: Microsoft JhengHei;">
+				<div id="result" style="margin-bottom: 50px"></div>
+			</span>
+		</h2>
+	</center>
+
+	<center>
+		<h2><span style="font-family: Microsoft JhengHei;">
+				<div id="result2" style="margin-bottom: 50px"><br /></div>
+			</span>
+		</h2>
+	</center>
+
+
+	<div align="left" style="margin-left:15%">
+		<h5><span style="font-family: Microsoft JhengHei;">
+				<div id="rec1" style="margin-bottom: 50px"><br /></div>
+			</span>
+		</h5>
+
+
+
+
+		<h5><span style="font-family: Microsoft JhengHei;">
+				<div id="rec2" style="margin-bottom: 50px"><br /></div>
+			</span>
+		</h5>
+
+
+
+
+		<h5><span style="font-family: Microsoft JhengHei;">
+				<div id="rec3" style="margin-bottom: 50px"><br /></div>
+			</span>
+		</h5>
+
+	</div>
+
+
+	<div id="footer">
+		<div class="container">
+
+			<div class="fbox1">
+				<span class="icon icon-map-marker"></span>
+				<span style="font-family: Microsoft JhengHei;">元智大學資訊管理學系
+					<br />桃園市中壢區遠東路135號</span>
+			</div>
+			<div class="fbox1">
+				<span class="icon icon-phone"></span>
+				<span>
+					Telephone: 03-463-8800 ext 2601
+				</span>
+			</div>
+			<div class="fbox1">
+				<span class="icon icon-envelope"></span>
+				<span>alison@saturn.yzu.edu.tw</span>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+</body>
+
+
+</html>
+<script>
+	function getRandom(minNum, maxNum) { //取得 minNum(最小值) ~ maxNum(最大值) 之間的亂數
+		return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+	}
+
+	function getRandomArray(minNum, maxNum, n) { //隨機產生不重覆的n個數字
+		var rdmArray = [n]; //儲存產生的陣列
+
+		for (var i = 0; i < n; i++) {
+			var rdm = 0; //暫存的亂數
+
+			do {
+				var exist = false; //此亂數是否已存在
+				rdm = getRandom(minNum, maxNum); //取得亂數
+
+				//檢查亂數是否存在於陣列中，若存在則繼續回圈
+				if (rdmArray.indexOf(rdm) != -1) exist = true;
+
+			} while (exist); //產生沒出現過的亂數時離開迴圈
+
+			rdmArray[i] = rdm;
+		}
+		return rdmArray;
+	}
+
+
+	var data1 = [
+		['【博恩夜夜秀】總統來了！史上第一個得到蔡英文浪漫喊話畫面的媒體', 'STR Network'],
+		['【神發明】真實版霍爾的移動車位！竟能讓車子停在空中？！', '878發明家'],
+		['鳥屎 Twitch Sings 4/21', '幻燄牙月'],
+		['【中學頭條】ㄍㄟ蜜超SWEET 竟然連這個也記得', '野火娛樂Wild Fire Entertainment'],
+		['被騙了？給我們一種莫名的 背叛感的愛豆們！DenQ', 'DenQ'],
+		['【環島挑戰號#4】蔡阿嘎X反骨男孩：新竹 100人瘋狂運動會！', '蔡阿嘎'],
+		['2019聲林之王校園巡迴演唱會-中原大學｜閻奕格 李友廷 Gail蓋兒 鄭可強 許莉潔', '聲林之王 Jungle Voice'],
+		['【炮仔聲】EP79預告 家雯變超硬！俊男愛殺寶娜', 'NewShowBiz完全娛樂'],
+		['HowFun / 看到這支影片的機率只有千萬分之五', 'HowFun']
+	];
+	var data2 = [
+		['【影評+解析】復仇者聯盟4:終局之戰 | 你準備好大爆哭了嗎?', '超粒方'],
+		['W看電影_復仇者聯盟：終局之戰(Avengers: Endgame)_重雷心得Part 1', 'W的生活旅遊_電影版'],
+		['[電影預告] Marvel Studios《復仇者聯盟4: 終局之戰》香港宣傳片”To The End”（中文字幕）',
+			'Marvel Studios Hong Kong'
+		],
+		['【音速小子】首支官方預告 - 今年11月奔馳大銀幕', '派拉蒙影片 官方頻道'],
+		['狗狗养大一只美洲狮，当狗狗受到伤害，它就会站出来保护狗狗！', '老吴说电影'],
+		['?劇評?我們與惡的距離：有雷完結版｜人物解析｜深度探討｜台劇｜獨家專訪｜留言抽劇本書｜',
+			'那些電影教我的事 Lessons from Movies'
+		],
+		['【哥吉拉 Ⅱ 怪獸之王】終極官方預告，5月29日(週三) 王者萬歲', '華納兄弟台灣粉絲俱樂部'],
+		['8岁男孩智商超群，却不料他身体里住着个30岁杀人狂，惊悚片《神童》', '我是影Sir'],
+		['【蜘蛛人：離家日】最新預告雷很大 7.2(二) 全球同步', 'Sony Pictures 索尼影業'],
+		['【復仇者聯盟：終局之戰】未來不會有這種娛樂高度的電影了｜有雷影評｜Avengers: Endgame｜部長評電影#129',
+			'部長'
+		]
+	];
+	var data3 = [
+		['住家後面的排水溝，原來能釣到這種魚...【可以吃嗎？】', 'Omega 歐咩嘎'],
+		['【狂美國1】我們買了一輛Lamborghini 超跑，揭開富二代不可告人的奢靡生活！ Jeff & Inthira',
+			'Jeff & Inthira'
+		],
+		['【尊】買了一顆鱷魚頭來煮火鍋!?', '人生肥宅x尊'],
+		['【呱吉直播】呱吉電台EP17：站著沒掙錢也不寒磣', '呱吉'],
+		['【呱吉】呱吉電台EP18：呱吉我一定要判你有罪', '呱吉'],
+		['大胃王挑戰吃3公斤的起司火鍋！前所未見的超大起司火鍋⋯', '三原JAPAN Sanyuan_JAPAN'],
+		['大胃王挑戰8人份燒肉丼！成功就能免費吃一年！丨MUKBANG Taiwan Big Eater BBQ Rice Challenge Big Food｜大食い',
+			'台灣大胃王丁丁/Ding-Ding'
+		],
+		['40盎司巨無霸牛排｜大胃王挑戰｜牛排大叔｜大胃王 大食い Food Challenge｜Huge 40oz Steak Food Challenge｜',
+			'吃貨豪豪'
+		],
+		['范范 范瑋琪被撩到當場爆走！？｜幹話搭訕術第54集｜波特王', '波特王 Potter King'],
+		['台灣VS法國早餐大PK！?法國媽媽能不能接受台灣的早餐?？', "Ku's dream酷的夢-"]
+	]
+
+	var data4 = [
+		['2019.05.03新聞深喉嚨\u3000怒嗆癟三！假韓粉「無差別攻擊」撕裂KMT\u3000韓國瑜忍無可忍？',
+			'新聞深喉嚨'
+		],
+		['時代力量議員黃捷質詢韓國瑜後狂翻白眼 因為韓一直喊"高雄發大財" 為何?｜許貴雅 主持｜【鄭知道了。先知道】20190504｜三立iNEWS',
+			'鄭知道了'
+		],
+		['台北鹽酥雞夭壽貴！點三樣竟然要190元！【蔡阿嘎】', '蔡阿嘎'],
+		['好尷尬...韓國瑜"權貴密室.背後開槍"說惹黨高層 吳韓會能說破冰!? ｜許貴雅主持｜【周末版鄭知道了PART2】20190427｜三立iNEWS',
+			'鄭知道了'
+		],
+		['"蜂蜜檸檬哥"吳蕚洋奉勸韓國瑜「別迷失自己」 分析情勢絕非"卡韓"而是....｜廖筱君 主持｜【新台灣加油PART1】20190424｜三立新聞台',
+			'新台灣加油'
+		],
+		['政經關不了（完整版）｜2019.05.02', '政經關不了'],
+		['史上最強宮鬥劇本曝光！吳郝馬用10天封殺韓朱王？190419【新聞面對面】', '新聞面對面'],
+		['Usai Pemilu - Jokowi: Kalau Ada Kecurangan Lapor Bawaslu (Part 2) | Mata Najwa',
+			'Najwa Shihab'
+		],
+		['獨!韓國瑜口號師法中共?!韓神、韓粉是複製毛澤東、紅衛兵?!郭台銘狂語是財經圈最狂?!政治狂粉需要敵人?!川普是全球最紅網紅民粹領袖!【年代向錢看】190503',
+			'年代向錢看'
+		],
+		['老鵝特搜#94 屁眼／宋楚瑜／征服宇宙／索羅門群島', '老天鵝娛樂']
+	]
+
+	var data5 = [
+		['【新聞】火腿打線調整 王柏融打第3棒首轟出爐', 'FOX體育家族'],
+		['OKC Thunder vs Portland Trail Blazers - Game 5 - Full Game Highlights | 2019 NBA Playoffs',
+			'Ximo Pierto'
+		],
+		['Boston Celtics vs Milwaukee Bucks - Game 1 - Full Game Highlights | 2019 NBA Playoffs',
+			'Ximo Pierto'
+		],
+		['我終於要【脫單】了？！健人蓋伊狂野撩妹全記錄│健人腳勤│ 2019ep19', '健人蓋伊'],
+		['Denver Nuggets vs Portland Trail Blazers - Game 3 - Full Game Highlights | 2019 NBA Playoffs',
+			'Ximo Pierto'
+		]
+	]
+
+	var data6 = [
+		['削平65座山，中国修建史上最霸气工程，惊呆国内外网友', '厉害了我的国']
+	]
+
+	var data7 = [
+		['挑戰50碗肉骨茶！大食怪鐵牛再次吃爆？老闆竟然說不要再吃了？｜頑GAME', '頑GAME'],
+		['【LNG】20180414 爆開', 'LNG 實況存檔'],
+		['阿翰po影片 │邁奇的野餐日', '阿翰po影片'],
+		['我们错了！小狗永久残废！医生建议把它抛弃？！', 'Yeemin亿民'],
+		['在不瘋狂就等死►百萬問答題 離開團隊真相曝光 一定要看到完 這就是你要的答案', '在不瘋狂就等死 x 狂人娛樂'],
+		['【最近紅什麼】不要講我秘密！ feat.橙姑娘梅精 《Game》', '最近紅什麼'],
+		['【LiFe週記】#28 返鄉專車番外篇 寶寶的故鄉', '上班不要看 NSFW'],
+		['瘋神無雙 官方正版 20190505 【蠢笑一刻值千金】+【爆笑飛時代-一彩券人生】', '瘋神無雙'],
+	]
+
+	var data8 = [
+		['武汉最牛早餐店，20个服务员忙不开！人均15元，排在队尾看不到店', '雪鱼探店China Food Travel'],
+		['神蹟再現!!白沙屯媽祖回宮不忘幫信徒祈福【2019全民瘋媽祖直播精華】-台灣民俗就看寶島神很大', '我愛神很大'],
+		['全都玩真的!"綜藝玩很大"被質疑造假 一刀未剪影片曝光│記者 李宜蕙 翁震翔｜【娛樂星世界】20190502｜三立新聞台',
+			'54Free食代'
+		],
+		['Sandy遭網友無端辱罵!吳宗憲提告網友"不起訴" 臉書po文直呼"親愛的檢察官你還在嗎"?｜記者羅湘 曾建勳｜【娛樂星世界】20190506｜三立新聞台',
+			'54Free食代'
+		],
+		['空拍直擊--鳳山萬人大造勢再現？韓國瑜真的要選總統了嗎？', 'HANK LI']
+	]
+
+	var data9 = [
+		['公視《我們與惡的距離》主題插曲MV-郁可唯 Yisa Yu〈路過人間〉', '華研國際'],
+		['Trout Fresh/呂士軒 - 愛吃味 (Official Music Video)', 'SmashRegz'],
+		['Eric周興哲《終於了解自由 Freedom》Official Music Video', 'Eric周興哲'],
+		['高爾宣 OSN -【Runaway】｜Official Lyric Video', 'SKRpresents 陶山音樂'],
+		["TXT (투모로우바이투게더) 'Cat & Dog' Official MV", 'ibighit'],
+		['阿信 [ 隱形的紀念 The Hidden Memories ] Official Music Video',
+			'相信音樂BinMusic'
+		],
+		['Taylor Swift - ME! (feat. Brendon Urie of Panic! At The Disco)',
+			'TaylorSwiftVEVO'
+		],
+		['黃氏兄弟【不專心】首張單曲MV ｜ Official Music Video', '黃氏兄弟'],
+		["[BANGTAN BOMB] '작은 것들을 위한 시 (Boy With Luv)' Stage CAM (BTS focus) @190418 M COUNTDOWN - BTS (방탄소년단)",
+			'BANGTANTV'
+		]
+	]
+
+	var data10 = [
+		['Toyota RAV4 2019 接單破萬張！阿基拉：先別急著下決定！ | 8891新車', '8891新車'],
+		['650匹不獨享！超級SUV出擊 Lamborghini Urus', 'buycartv'],
+	]
+
+	var data11 = [
+		['溫昇豪 x 理科太太 - 我們與悲傷的距離', '理科太太 Li Ke Tai Tai'],
+	]
+
+	var data12 = [
+		['【喳遊學EP.2.87】在日本帶外國同學一起去台灣美食祭!!', '菜喳'],
+		['TXO 拾參｜爆料Q&A(下)：形象毀滅特輯！宿舍除了外星人以外...還有一個暴露狂！', 'TXO Creative'],
+		['教科書又騙了你►甲午戰爭會輸 可不是因為武器不好', 'cheap'],
+		['【喳遊學Ep.2】第二週就想家想到不行..至於廚藝...', '菜喳'],
+		['【愛夫便當】挑戰把女朋友做成便當，評審請給分 feat.老王', '八毛'],
+		['【喳遊學Ep.1】我決定一個人去日本念書了', '菜喳'],
+		['教科書又騙了你►甲午戰爭會輸 可不是因為武器不好', 'cheap']
+	]
+
+	var data13 = [
+		['【黃阿瑪的後宮生活】阿瑪的一天！', '黃阿瑪的後宮生活'],
+		['【豆漿 - SoybeanMilk】看到大猩猩\u3000貓咪瞳孔放大到不可思議', '豆漿- SoybeanMilk'],
+		['【魚乾】又有新跳台了！質感上升，貓咪買單嗎？(Feat. 胡子)', '魚乾'],
+		['【黃阿瑪的後宮生活】矇眼摸貓！猜得出來嗎？ft.展榮展瑞', '黃阿瑪的後宮生活'],
+		['【豆漿 - SoybeanMilk】快被妳吃垮了\u3000看能不能拍幾張照片賺點錢', '豆漿- SoybeanMilk'],
+		['【黃阿瑪的後宮生活】浣腸＆Soso的生日！令其他貓崩潰！', '黃阿瑪的後宮生活'],
+	]
+
+	var data14 = [
+		['#開架新品點點名 近期開架好物及地雷大解析!', 'Hello Catie'],
+		['喀納斯湖水怪被抓獲，身長數十米，居然是一只變異的', '腦洞大爆炸'],
+
+	]
+
+	$('button#btn3').click(function () {
+
+		var xhttp = new XMLHttpRequest();
+		var hour_sec = parseInt(document.getElementById("hour").value) * 3600;
+		var min_sec = parseInt(document.getElementById("minute").value) * 60;
+		var sec = parseInt(document.getElementById("second").value);
+		var total_time = hour_sec + min_sec + sec
+		var viewcount = parseInt(document.getElementById("totalcount").value);
+		var subcount = parseInt(document.getElementById("sub").value);
+		var videocount = parseInt(document.getElementById("videocount").value);
+
+		if (document.getElementById("channel_month").value = '0')
+			document.getElementById("channel_month").value = 1;
+
+		var timepass = parseInt(document.getElementById("channel_year").value) + "-" + parseInt(document
+				.getElementById(
+					"channel_month").value) + "-" + parseInt(document.getElementById("channel_date").value) +
+			" 0.0.0";
+
+		api_url =
+			"http://127.0.0.1:5000/GBRT/" + total_time + "/" + viewcount + "/" + subcount + "/" +
+			videocount + "/" + timepass;
+
+
+
+		$.ajax({
+			url: api_url,
+			type: "GET",
+			success: function (resp) {
+				console.log(resp)
+				if (resp.toFixed(2) * 100 > 100) {
+					var trending = 100;
+				} else if (resp.toFixed(2) * 100 < 0) {
+					var trending = 0;
+				} else {
+					var trending = resp.toFixed(2) * 100;
+				}
+				result = "您的影片成為熱門影片的機率是：" + trending + "%";
+				document.getElementById("result").innerHTML = result;
+			}
+		});
+
+		if ($('input[id="rad"]:checked').val() == 1) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data1[get_data[0]][1] + '所提供的' + data1[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data1[get_data[1]][1] + '所提供的' + data1[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data1[get_data[2]][1] + '所提供的' + data1[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 2) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data2[get_data[0]][1] + '所提供的' + data2[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data2[get_data[1]][1] + '所提供的' + data2[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data2[get_data[2]][1] + '所提供的' + data2[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 3) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data3[get_data[0]][1] + '所提供的' + data3[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data3[get_data[1]][1] + '所提供的' + data3[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data3[get_data[2]][1] + '所提供的' + data3[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 4) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data4[get_data[0]][1] + '所提供的' + data4[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data4[get_data[1]][1] + '所提供的' + data4[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data4[get_data[2]][1] + '所提供的' + data4[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 5) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data5[get_data[0]][1] + '所提供的' + data5[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data5[get_data[1]][1] + '所提供的' + data5[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data5[get_data[2]][1] + '所提供的' + data5[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 6) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			document.getElementById("rec1").innerHTML = '1. 由' + data6[0][1] + '所提供的' + data6[0][0];
+
+
+		}
+		if ($('input[id="rad"]:checked').val() == 7) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data7[get_data[0]][1] + '所提供的' + data7[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data7[get_data[1]][1] + '所提供的' + data7[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data7[get_data[2]][1] + '所提供的' + data7[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 8) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data8[get_data[0]][1] + '所提供的' + data8[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data8[get_data[1]][1] + '所提供的' + data8[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data8[get_data[2]][1] + '所提供的' + data8[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 9) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data9[get_data[0]][1] + '所提供的' + data9[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data9[get_data[1]][1] + '所提供的' + data9[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data9[get_data[2]][1] + '所提供的' + data9[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 10) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 3, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data10[get_data[0]][1] + '所提供的' + data10[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data10[get_data[1]][1] + '所提供的' + data10[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data10[get_data[2]][1] + '所提供的' + data10[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 11) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+
+			document.getElementById("rec1").innerHTML = '1. 由' + data11[0][1] + '所提供的' + data11[0][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data11[1][1] + '所提供的' + data11[1][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 12) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data12[get_data[0]][1] + '所提供的' + data12[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data12[get_data[1]][1] + '所提供的' + data12[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data12[get_data[2]][1] + '所提供的' + data12[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 13) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 9, 3);
+			document.getElementById("rec1").innerHTML = '1. 由' + data13[get_data[0]][1] + '所提供的' + data13[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data13[get_data[1]][1] + '所提供的' + data13[get_data[
+				1]][0];
+			document.getElementById("rec3").innerHTML = '3. 由' + data13[get_data[2]][1] + '所提供的' + data13[get_data[
+				2]][0];
+
+		}
+		if ($('input[id="rad"]:checked').val() == 14) {
+			document.getElementById("result2").innerHTML = "您可以參考下列影片：";
+			var get_data = getRandomArray(0, 2, 2);
+			document.getElementById("rec1").innerHTML = '1. 由' + data14[get_data[0]][1] + '所提供的' + data14[get_data[
+				0]][0];
+			document.getElementById("rec2").innerHTML = '2. 由' + data14[get_data[1]][1] + '所提供的' + data14[get_data[
+				1]][0];
+
+		}
+
+
+
+	});
+</script>
+<script>
+	$('button#cid').click(function () {
+
+		var xhttp = new XMLHttpRequest();
+
+		var cid = document.getElementById("channelId").value;
+		console.log(cid);
+		api_snippet = "https://www.googleapis.com/youtube/v3/channels?part=snippet&id=" + cid +
+			"&key=AIzaSyDI5-YrOy-genWFo65dJ1m9zCohHJ1KK8Y"
+
+
+		var ortime = ""
+
+		$.ajax({
+			url: api_snippet,
+			type: "GET",
+			success: function (resp) {
+				ortime = resp["items"][0]["snippet"]["publishedAt"];
+				console.log(ortime);
+				var d = new Date(ortime);
+				document.getElementById("channel_year").value = d.getFullYear();
+				document.getElementById("channel_month").value = d.getMonth();
+				document.getElementById("channel_date").value = d.getDate();
+				if (document.getElementById("channel_month").value = '0')
+					document.getElementById("channel_month").value = 1;
+			}
+		});
+
+		api_statistics = "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=" + cid +
+			"&key=AIzaSyDI5-YrOy-genWFo65dJ1m9zCohHJ1KK8Y"
+		var viewc = 0;
+		var subc = 0;
+		var videoc = 0;
+		$.ajax({
+			url: api_statistics,
+			type: "GET",
+			success: function (resp) {
+				viewc = resp["items"][0]["statistics"]["viewCount"];
+				document.getElementById("totalcount").value = viewc;
+				subc = resp["items"][0]["statistics"]["subscriberCount"];
+				document.getElementById("sub").value = subc;
+				videoc = resp["items"][0]["statistics"]["videoCount"];
+				document.getElementById("videocount").value = videoc;
+
+			}
+		});
+
+	});
+</script>
